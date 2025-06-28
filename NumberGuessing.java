@@ -6,14 +6,14 @@ public class NumberGuessing {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
-        int score = 0;  // Keeps track of how many times the player guessed correctly
+        int score = 0;
 
         System.out.println("🎮 Welcome to the Number Guessing Game!");
         System.out.println("I'm thinking of a number between 1 and 100.");
         System.out.println("Can you guess what it is? You have 5 chances each round.\n");
 
         while (true) {
-            int targetNumber = random.nextInt(100) + 1;  // Generates a number between 1 and 100
+            int targetNumber = random.nextInt(100) + 1;
             int attemptsLeft = 5;
             boolean guessedCorrectly = false;
 
@@ -43,18 +43,4 @@ public class NumberGuessing {
                 System.out.println("The correct number was: " + targetNumber);
             }
 
-            System.out.println("🏆 Your current score: " + score);
-            System.out.print("🔄 Would you like to play another round? (yes/no): ");
-            String playAgain = scanner.next();
-
-            if (!playAgain.equalsIgnoreCase("yes")) {
-                break;  // Exit the game loop
-            }
-
-            System.out.println("\n----------------------------------\n");
-        }
-
-        scanner.close();
-        System.out.println("💖 Thank you for playing! See you next time!");
-    }
-}
+            System.out
